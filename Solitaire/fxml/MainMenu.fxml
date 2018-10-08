@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="205.0" prefWidth="274.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MenuController">
+   <children>
+      <ImageView fitHeight="228.0" fitWidth="288.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/backgroundMenu.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="infoButton" layoutX="95.0" layoutY="135.0" mnemonicParsing="false" onAction="#infoBtnOnAction" text="Informations" />
+      <Button fx:id="quitButton" layoutX="117.0" layoutY="168.0" mnemonicParsing="false" onAction="#quitOnAction" text="Quit" />
+      <VBox layoutX="178.0" layoutY="32.0">
+         <children>
+            <RadioButton fx:id="oneColorRadioBtn" mnemonicParsing="false" text="1 Color">
+               <toggleGroup>
+                  <ToggleGroup fx:id="difficulty" />
+               </toggleGroup>
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.009523809523809545" radius="0.5">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </RadioButton>
+            <RadioButton fx:id="twoColorRadioBtn" mnemonicParsing="false" text="2 Colors" toggleGroup="$difficulty">
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.009523809523809545" radius="0.5">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="fourColorRadioBtn" mnemonicParsing="false" selected="true" text="4 Colors" toggleGroup="$difficulty">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.009523809523809545" radius="0.5">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </textFill></RadioButton>
+         </children>
+      </VBox>
+      <Button fx:id="mrsMopBtn" layoutX="26.0" layoutY="27.0" mnemonicParsing="false" onAction="#mrsMopOnAction" prefHeight="60.0" prefWidth="91.0" text="MrsMop" />
+      <Button layoutX="105.0" layoutY="103.0" mnemonicParsing="false" onAction="#statsOnAction" text="Statistics" />
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</Pane>
